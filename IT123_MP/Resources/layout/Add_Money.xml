@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="@string/add_money"
+        android:textSize="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="12dp"
+        android:textColor="#248fef"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:id="@+id/textView1"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="@string/your_balance"
+            android:textSize="25dp"
+            android:textColor="#248fef"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/textView2" />
+        <TextView
+            android:text=""
+            android:textSize="40dp"
+            android:layout_marginBottom="1.0dp"
+            android:textColor="#6C6C6C"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@+id/textView3" />
+        <TextView
+            android:text="@string/enter_amount"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/textView4" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_marginStart="8dp"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:hint="@string/amount_hint"
+            android:layout_marginEnd="8dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText1" />
+        <Button
+            android:text="@string/cash_in"
+            android:layout_marginTop="8dp"
+            android:textSize="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#1f6fb6"
+            android:id="@+id/button1" />
+        <Button
+                android:text="@string/back_button"
+                android:layout_marginTop="10dp"
+                android:textSize="30dp"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="70dp"
+                android:layout_width="match_parent"
+                android:layout_height="60.5dp"
+                android:backgroundTint="#f62534"
+                android:id="@+id/button2" />
+    </LinearLayout>
+</LinearLayout>
+

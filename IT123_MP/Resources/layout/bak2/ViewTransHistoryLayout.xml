@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="">
+    <TextView
+        android:text="Transaction History"
+        android:textSize="40px"
+        android:layout_marginTop="50px"
+        android:layout_marginBottom="75px"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="26.5dp"
+        android:textStyle="bold"
+        android:id="@+id/textView1"
+        android:gravity="center" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingTop="px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+        <Button
+            android:text="Back"
+            android:layout_marginStart="300px"
+            android:layout_marginEnd="300px"
+            android:layout_marginBottom="20px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3C038E"
+            android:id="@+id/button2" />
+        <TextView
+            android:text="ID                      Type                      New Balance                  Date"
+            android:textSize="35px"
+            android:textStyle="bold"
+            android:layout_marginBottom="10px"
+            android:textColor="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="52.5dp"
+            android:id="@+id/textView2"
+            android:gravity="center" />
+        <ListView
+            android:id="@+id/mainlistview"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+        </ListView>
+    </LinearLayout>
+</LinearLayout>

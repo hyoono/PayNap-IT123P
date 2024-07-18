@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout1">
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="0.0dp"
+        android:layout_marginTop="0.0dp"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="Welcome,"
+            android:layout_width="match_parent"
+            android:layout_height="48.5dp"
+            android:textColor="#248fef"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:layout_marginStart="15dp"
+            android:id="@+id/textView2"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:minWidth="25dp"
+        android:minHeight="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="479.6dp"
+        android:id="@+id/linearLayout1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/linearLayout2">
+            <TextView
+                android:text="Your Balance:"
+                android:textSize="25dp"
+                android:textColor="#248fef"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:textStyle="bold"
+                android:id="@+id/textView4" />
+            <TextView
+                android:text=""
+                android:textSize="40dp"
+                android:layout_marginBottom="1dp"
+                android:textColor="#6C6C6C"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:id="@+id/textView3" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="299.3dp"
+            android:paddingBottom="4dp"
+            android:layout_height="307.6dp"
+            android:gravity="center"
+            android:background="#80ffffff"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="2dp"
+            android:id="@+id/linearLayout3">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minHeight="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/linearLayout2">
+                <Button
+                    android:text="Cash in"
+                    android:textSize="25dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="147.6dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#1f6fb6"
+                    android:id="@+id/button1" />
+                <Button
+                    android:text="Send money"
+                    android:textSize="23.5dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#1f6fb6"
+                    android:id="@+id/button2" />
+            </LinearLayout>
+            <Button
+                android:text="View Transaction"
+                android:layout_marginTop="7.0dp"
+                android:textSize="25dp"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="70dp"
+                android:layout_width="290.0dp"
+                android:layout_height="60.5dp"
+                android:backgroundTint="#1f6fb6"
+                android:id="@+id/button3" />
+            <Button
+                android:text="Edit user profile"
+                android:layout_marginTop="8.5dp"
+                android:textSize="25dp"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="70dp"
+                android:layout_width="290.0dp"
+                android:layout_height="60.5dp"
+                android:backgroundTint="#1f6fb6"
+                android:id="@+id/button4"
+                android:layout_marginBottom="0.0dp" />
+            <Button
+                android:text="Log Out"
+                android:layout_marginTop="10dp"
+                android:textSize="30dp"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="70dp"
+                android:layout_width="match_parent"
+                android:layout_height="60.5dp"
+                android:backgroundTint="#f62534"
+                android:id="@+id/button5" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

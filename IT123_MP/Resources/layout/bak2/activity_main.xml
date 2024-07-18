@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="278.5dp"
+        android:gravity="center"
+        android:paddingTop="50px"
+        android:paddingBottom="150px"
+        android:background="#FFFFFF"
+        android:id="@+id/linearLayout1">
+        <ImageView
+            android:src="drawable/paynaplogo.png"
+            android:layout_width="261.5dp"
+            android:layout_height="214.5dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/imageView1" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingTop="50px"
+        android:paddingBottom="50px"
+        android:background="FFFFFF"
+        android:id="@+id/linearLayout2"
+        android:layout_marginTop="0.0dp">
+        <Button
+            android:text="Log In"
+            android:textSize="50px"
+            android:layout_width="260.5dp"
+            android:layout_height="55.5dp"
+            android:backgroundTint="#248fef"
+            android:id="@+id/button1" />
+        <Button
+            android:text="Sign Up"
+            android:textSize="50px"
+            android:layout_width="260.5dp"
+            android:layout_height="55.5dp"
+            android:backgroundTint="#1f6fb6"
+            android:id="@+id/button2" />
+
+    </LinearLayout>
+</LinearLayout>
