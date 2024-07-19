@@ -174,7 +174,8 @@
                 android:layout_width="296.0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:backgroundTint="#248fef"
+                android:textColor="#ffffff"
+                android:backgroundTint="#1f6fb6"
                 android:id="@+id/button1" />
             <Button
                 android:text="@string/back_button"
@@ -184,6 +185,7 @@
                 android:layout_marginBottom="70dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textColor="#ffffff"
                 android:backgroundTint="#f62534"
                 android:id="@+id/button2" />
         </LinearLayout>

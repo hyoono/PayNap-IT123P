@@ -38,6 +38,10 @@
     <string name="old_password">Enter Old Password</string>
     <string name="name_change">Change Name</string>
     <string name="mobile_number_notice">*You cannot edit your mobile number</string>
+    <string name="ph_number_code">(+63)</string>
+    <string name="view_transaction">View Transaction</string>
+    <string name="edit_user_profile">Edit User Profile</string>
+    <string name="log_out">Log Out</string>
   
   
   

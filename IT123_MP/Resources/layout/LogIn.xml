@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:text="Log In"
+        android:text="@string/log_in"
         android:textSize="40dp"
         android:layout_marginTop="1.5dp"
         android:layout_marginBottom="9.0dp"
@@ -25,10 +25,10 @@
         android:layout_width="match_parent"
         android:layout_height="360.7dp"
         android:layout_weight="1"
-        android:background="#95ffffff"
+        android:background="#ffffff"
         android:layout_marginTop="0.0dp">
         <TextView
-            android:text="Mobile No."
+            android:text="@string/mobile_no"
             android:textSize="25dp"
             android:layout_marginTop="10dp"
             android:textColor="#000000"
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/linearLayout1">
             <TextView
-                android:text="(+63)"
+                android:text="@string/ph_number_code"
                 android:textSize="20dp"
                 android:layout_marginStart="10dp"
                 android:textColor="#000000"
@@ -64,7 +64,7 @@
                 android:id="@+id/editText1" />
         </LinearLayout>
         <TextView
-            android:text="Password:"
+            android:text="@string/password"
             android:textSize="25dp"
             android:textColor="#000000"
             android:layout_marginStart="10dp"
@@ -89,22 +89,24 @@
             android:layout_marginEnd="10dp"
             android:id="@+id/checkBox1" />
         <Button
-            android:text="Log In"
+            android:text="@string/log_in"
             android:layout_marginTop="3.0dp"
             android:textSize="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#ffffff"
             android:backgroundTint="#1f6fb6"
             android:id="@+id/button1" />
         <Button
-            android:text="Cancel"
+            android:text="@string/cancel_button"
             android:layout_marginStart="10dp"
             android:textSize="30dp"
             android:layout_marginEnd="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#ffffff"
             android:backgroundTint="#f62534"
             android:id="@+id/button2" />
     </LinearLayout>

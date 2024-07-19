@@ -50,18 +50,20 @@
             android:layout_marginBottom="64.7dp"
             android:layout_marginTop="0.0dp">
             <Button
-                android:text="Log In"
+                android:text="@string/log_in"
                 android:textSize="20dp"
                 android:layout_width="260.5dp"
                 android:layout_height="55.5dp"
                 android:backgroundTint="#248fef"
+                android:textColor="#ffffff"
                 android:id="@+id/button1" />
             <Button
-                android:text="Sign Up"
+                android:text="@string/sign_up"
                 android:textSize="20dp"
                 android:layout_width="260.5dp"
                 android:layout_height="55.5dp"
                 android:backgroundTint="#1f6fb6"
+                android:textColor="#ffffff"
                 android:id="@+id/button2" />
         </LinearLayout>
     </LinearLayout>
