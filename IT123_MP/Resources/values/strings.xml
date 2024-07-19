@@ -3,7 +3,6 @@
     <string name="action_settings">Settings</string>
     <string name="your_balance">Your Balance:</string>
     <string name="add_money">Add Money</string>
-    <string name="enter_amount">Enter Amount</string>
     <string name="amount_word_hint">Amount</string>
     <string name="cash_in">Cash In</string>
     <string name="log_in">Log In</string>

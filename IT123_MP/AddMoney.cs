@@ -57,7 +57,7 @@ namespace IT123_MP
             {
 
                 newAccBalance = userAccBalance + addAmount;
-                command.QueryCommand("http://192.168.165.158/MoneySendingApp/Functions/update_user_balance.php?user_mobile_num=" + userMobileNum + "&user_acc_balance=" + newAccBalance);
+                command.QueryCommand("http://192.168.1.31/MoneySendingApp/Functions/update_user_balance.php?user_mobile_num=" + userMobileNum + "&user_acc_balance=" + newAccBalance);
 
                 command.RecordTransaction(userMobileNum, newAccBalance.ToString(), "ADD MONEY");
 

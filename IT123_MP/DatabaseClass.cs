@@ -37,7 +37,7 @@ namespace IT123_MP
         }
         public StreamReader SearchCommand(string mobileNum)
         {
-            request = (HttpWebRequest)WebRequest.Create("http://192.168.165.158/MoneySendingApp/Functions/search_user_record.php?mobile_num=" + mobileNum);
+            request = (HttpWebRequest)WebRequest.Create("http://192.168.1.31/MoneySendingApp/Functions/search_user_record.php?mobile_num=" + mobileNum);
             response = (HttpWebResponse)request.GetResponse();
             res = response.ProtocolVersion.ToString();
             StreamReader reader = new StreamReader(response.GetResponseStream());
@@ -103,7 +103,7 @@ namespace IT123_MP
         {
             string timeStamp = DateTime.Now.ToString("yyyy/MM/dd");
 
-            QueryCommand("http://192.168.165.158/MoneySendingApp/Functions/record_transaction.php?user_mobile_num=" + mobileNum
+            QueryCommand("http://192.168.1.31/MoneySendingApp/Functions/record_transaction.php?user_mobile_num=" + mobileNum
                 + "&trans_type=" + transType + "&new_acc_bal=" + newBalance + "&trans_date=" + timeStamp);
         }
         public string[] GetUserTransHistory(string mobileNum)
@@ -112,7 +112,7 @@ namespace IT123_MP
 
             try
             {
-                request = (HttpWebRequest)WebRequest.Create("http://192.168.165.158/MoneySendingApp/Functions/search_trans_history.php?user_mobile_num=" + mobileNum);
+                request = (HttpWebRequest)WebRequest.Create("http://192.168.1.31/MoneySendingApp/Functions/search_trans_history.php?user_mobile_num=" + mobileNum);
                 response = (HttpWebResponse)request.GetResponse();
                 res = response.ProtocolVersion.ToString();
                 StreamReader reader = new StreamReader(response.GetResponseStream());

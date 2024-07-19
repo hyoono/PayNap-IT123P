@@ -57,7 +57,7 @@ namespace IT123_MP
 
             if (validData)
             {
-                command.QueryCommand("http://192.168.165.158/MoneySendingApp/Functions/add_user_info.php?mobile_num=" + mobileNum + "&user_name=" + userName + "&user_password=" + passConfirm + "&acc_balance=" + accBalance);
+                command.QueryCommand("http://192.168.1.31/MoneySendingApp/Functions/add_user_info.php?mobile_num=" + mobileNum + "&user_name=" + userName + "&user_password=" + passConfirm + "&acc_balance=" + accBalance);
                 Toast.MakeText(this, "Sign Up Successfully!", ToastLength.Long).Show();
 
                 mobile_num.Text = String.Empty;

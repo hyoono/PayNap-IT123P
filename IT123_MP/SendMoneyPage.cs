@@ -57,8 +57,8 @@ namespace IT123_MP
                 double resAccBalance = command.GetUserBalance(resMobileNum);
                 newUserBalance = userAccBalance - sendAmount;
                 double newResBalance = resAccBalance + sendAmount;
-                command.QueryCommand("http://192.168.165.158/MoneySendingApp/Functions/update_user_balance.php?user_mobile_num=" + userMobileNum + "&user_acc_balance=" + newUserBalance);
-                command.QueryCommand("http://192.168.165.158/MoneySendingApp/Functions/update_user_balance.php?user_mobile_num=" + resMobileNum + "&user_acc_balance=" + newResBalance);
+                command.QueryCommand("http://192.168.1.31/MoneySendingApp/Functions/update_user_balance.php?user_mobile_num=" + userMobileNum + "&user_acc_balance=" + newUserBalance);
+                command.QueryCommand("http://192.168.1.31/MoneySendingApp/Functions/update_user_balance.php?user_mobile_num=" + resMobileNum + "&user_acc_balance=" + newResBalance);
 
                 RecordTransaction(newResBalance);
 
