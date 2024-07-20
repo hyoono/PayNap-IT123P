@@ -98,6 +98,7 @@
             android:layout_height="wrap_content"
             android:textColor="#ffffff"
             android:backgroundTint="#1f6fb6"
+            android:background="@drawable/topcorners"
             android:id="@+id/button1" />
         <Button
             android:text="@string/cancel_button"
@@ -108,6 +109,8 @@
             android:layout_height="wrap_content"
             android:textColor="#ffffff"
             android:backgroundTint="#f62534"
+            android:layout_marginTop="5dp"
+android:background="@drawable/bottomcorners"
             android:id="@+id/button2" />
     </LinearLayout>
 </LinearLayout>

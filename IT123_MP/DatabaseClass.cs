@@ -135,21 +135,6 @@ namespace IT123_MP
                     items.Add(new string[] { transID, transType, newBalance, transDate });
                 }
 
-
-
-                    //for (var ctr = 0; ctr < jsonLength; ctr++)
-                    //{
-                    //    var u1 = root[ctr];
-
-                    //    string transID = u1.GetProperty("trans_id").ToString();
-                    //    string transType = u1.GetProperty("trans_type").ToString();
-                    //    string newBalance = u1.GetProperty("new_acc_bal").ToString();
-                    //    string transDate = u1.GetProperty("trans_date").ToString();
-
-                    //    compile = "000" + transID + "  -  " + transType + "             " + newBalance + "      " + transDate;
-
-                    //    userTransData[ctr] = compile;
-                    //}
                 response.Close();
                 reader.Close();
                 doc.Dispose();
@@ -187,6 +172,15 @@ namespace IT123_MP
                     return true;
                 }
             }
+            return false;
+        }
+        public bool PasswordLength(string data)
+        {
+            if (data.Length < 6)
+            {
+                return true;
+            }
+            
             return false;
         }
     }

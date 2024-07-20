@@ -58,6 +58,7 @@
             android:textSize="30dp"
             android:layout_marginEnd="16dp"
             android:layout_height="wrap_content"
+            android:inputType="number"
             android:id="@+id/editText1" />
         <TextView
             android:text="@string/enter_amount"
@@ -77,6 +78,7 @@
             android:textSize="30dp"
             android:layout_marginEnd="16dp"
             android:layout_height="wrap_content"
+            android:inputType="number"
             android:id="@+id/editText2" />
         <TextView
             android:text="@string/send_money_notice"
@@ -95,6 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="60.5dp"
             android:backgroundTint="#1f6fb6"
+            android:background="@drawable/topcorners"
             android:id="@+id/button1" />
         <Button
             android:text="@string/back_button"
@@ -105,6 +108,8 @@
             android:layout_height="60.5dp"
             android:textColor="#ffffff"
             android:backgroundTint="#f62534"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bottomcorners"
             android:id="@+id/button2" />
     </LinearLayout>
 </LinearLayout>

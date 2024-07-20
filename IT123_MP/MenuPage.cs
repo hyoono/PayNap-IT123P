@@ -32,8 +32,8 @@ namespace IT123_MP
 
             userMobileNum = Intent.GetStringExtra("UserMobileNum");
 
-            displayName = FindViewById<TextView>(Resource.Id.textView2);
-            yourBalance = FindViewById<TextView>(Resource.Id.textView3);
+            displayName = FindViewById<TextView>(Resource.Id.textView3);
+            yourBalance = FindViewById<TextView>(Resource.Id.textView5);
 
             add_button = FindViewById<Button>(Resource.Id.button1);
             send_button = FindViewById<Button>(Resource.Id.button2);
@@ -92,7 +92,7 @@ namespace IT123_MP
         protected void GetUsername(string mobileNum)
         {
             userData = command.GetUserData(mobileNum);
-            displayName.Text = "Welcome,\n\t\t" + userData[0];
+            displayName.Text = userData[0];
         }
         protected void GetBalance(string mobileNum)
         {

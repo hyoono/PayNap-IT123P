@@ -16,7 +16,7 @@
         android:layout_marginTop="0.0dp"
         android:id="@+id/linearLayout1">
         <TextView
-            android:text=""
+            android:text="Welcome,"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#248fef"
@@ -24,6 +24,16 @@
             android:textSize="30dp"
             android:layout_marginStart="7dp"
             android:id="@+id/textView2"/>
+        <TextView
+            android:text=""
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#248fef"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:layout_marginStart="7dp"
+            android:id="@+id/textView3"/>
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
@@ -59,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:id="@+id/textView3" />
+                android:id="@+id/textView5" />
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"

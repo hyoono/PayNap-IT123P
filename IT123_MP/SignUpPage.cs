@@ -64,17 +64,24 @@ namespace IT123_MP
                 user_name.Text = String.Empty;
                 password.Text = String.Empty;
                 confirm_pass.Text = String.Empty;
+                Finish();
             }
-            Finish();
+            
         }
         protected bool Validations()
         {
             bool stringEmpty = command.EmptyValidation(mobileNum + "," + userName + "," + userPass + "," + passConfirm);
             bool isNumValid = command.NumberValidation(mobileNum);
             bool userExist = command.SearchUserExist(mobileNum);
+            bool passLength = command.PasswordLength(userPass);
 
             if (stringEmpty)
             { Toast.MakeText(this, "Please fill all the details.", ToastLength.Long).Show(); return false; }
+
+            else if (passLength)
+            {
+                Toast.MakeText(this, "Please make your password at least 6 characters.", ToastLength.Long).Show(); return false;
+            }
 
             else if (!isNumValid)
             { Toast.MakeText(this, "Invalid Mobile Number", ToastLength.Long).Show(); return false; }
