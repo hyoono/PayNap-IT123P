@@ -28,7 +28,7 @@ namespace IT123_MP
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.MenuPage);
-            Window.DecorView.SetBackgroundResource(Resource.Drawable.gradientBG);
+            Window.DecorView.SetBackgroundResource(Resource.Drawable.gradientBGmain);
 
             userMobileNum = Intent.GetStringExtra("UserMobileNum");
 
@@ -76,6 +76,8 @@ namespace IT123_MP
         }
         protected void LogOut(object sender, EventArgs e)
         {
+            Intent i = new Intent(this, typeof(MainActivity));
+            StartActivity(i);
             Finish();
         }
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
@@ -90,7 +92,7 @@ namespace IT123_MP
         protected void GetUsername(string mobileNum)
         {
             userData = command.GetUserData(mobileNum);
-            displayName.Text = "Welcome, " + userData[0];
+            displayName.Text = "Welcome,\n\t\t" + userData[0];
         }
         protected void GetBalance(string mobileNum)
         {
@@ -103,5 +105,10 @@ namespace IT123_MP
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+        public override void OnBackPressed()
+        {
+            
+        }
+
     }
 }

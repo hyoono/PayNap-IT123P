@@ -37,7 +37,7 @@ namespace IT123_MP
         }
         public StreamReader SearchCommand(string mobileNum)
         {
-            request = (HttpWebRequest)WebRequest.Create("http://192.168.1.31/MoneySendingApp/Functions/search_user_record.php?mobile_num=" + mobileNum);
+            request = (HttpWebRequest)WebRequest.Create("http://172.18.13.160/MoneySendingApp/Functions/search_user_record.php?mobile_num=" + mobileNum);
             response = (HttpWebResponse)request.GetResponse();
             res = response.ProtocolVersion.ToString();
             StreamReader reader = new StreamReader(response.GetResponseStream());
@@ -103,16 +103,15 @@ namespace IT123_MP
         {
             string timeStamp = DateTime.Now.ToString("yyyy/MM/dd");
 
-            QueryCommand("http://192.168.1.31/MoneySendingApp/Functions/record_transaction.php?user_mobile_num=" + mobileNum
+            QueryCommand("http://172.18.13.160/MoneySendingApp/Functions/record_transaction.php?user_mobile_num=" + mobileNum
                 + "&trans_type=" + transType + "&new_acc_bal=" + newBalance + "&trans_date=" + timeStamp);
         }
-        public string[] GetUserTransHistory(string mobileNum)
+        public List<string[]> GetUserTransHistory(string mobileNum)
         {
-            string compile = "";
-
+            var items = new List<string[]>();
             try
             {
-                request = (HttpWebRequest)WebRequest.Create("http://192.168.1.31/MoneySendingApp/Functions/search_trans_history.php?user_mobile_num=" + mobileNum);
+                request = (HttpWebRequest)WebRequest.Create("http://172.18.13.160/MoneySendingApp/Functions/search_trans_history.php?user_mobile_num=" + mobileNum);
                 response = (HttpWebResponse)request.GetResponse();
                 res = response.ProtocolVersion.ToString();
                 StreamReader reader = new StreamReader(response.GetResponseStream());
@@ -121,6 +120,8 @@ namespace IT123_MP
                 JsonElement root = doc.RootElement;
                 int jsonLength = (root.GetArrayLength());
                 userTransData = new string[jsonLength];
+
+                
 
                 for (var ctr = 0; ctr < jsonLength; ctr++)
                 {
@@ -131,27 +132,42 @@ namespace IT123_MP
                     string newBalance = u1.GetProperty("new_acc_bal").ToString();
                     string transDate = u1.GetProperty("trans_date").ToString();
 
-                    compile = "000" + transID + "  -  " + transType + "             " + newBalance + "      " + transDate;
-
-                    userTransData[ctr] = compile;
+                    items.Add(new string[] { transID, transType, newBalance, transDate });
                 }
+
+
+
+                    //for (var ctr = 0; ctr < jsonLength; ctr++)
+                    //{
+                    //    var u1 = root[ctr];
+
+                    //    string transID = u1.GetProperty("trans_id").ToString();
+                    //    string transType = u1.GetProperty("trans_type").ToString();
+                    //    string newBalance = u1.GetProperty("new_acc_bal").ToString();
+                    //    string transDate = u1.GetProperty("trans_date").ToString();
+
+                    //    compile = "000" + transID + "  -  " + transType + "             " + newBalance + "      " + transDate;
+
+                    //    userTransData[ctr] = compile;
+                    //}
                 response.Close();
                 reader.Close();
                 doc.Dispose();
             }
+
             catch
             {
                 return null;
             }
-            return userTransData;
+            return items;
         }
         public bool NumberValidation(string mobileNum)
         {
             try
             {
-                bool starting = mobileNum.StartsWith("09");
+                bool starting = mobileNum.StartsWith("9");
 
-                if (mobileNum.Length != 11 || !starting)
+                if (mobileNum.Length != 10 || !starting)
                 { return false; }
                 double check = double.Parse(mobileNum);
             }

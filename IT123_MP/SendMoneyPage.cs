@@ -57,8 +57,8 @@ namespace IT123_MP
                 double resAccBalance = command.GetUserBalance(resMobileNum);
                 newUserBalance = userAccBalance - sendAmount;
                 double newResBalance = resAccBalance + sendAmount;
-                command.QueryCommand("http://192.168.1.31/MoneySendingApp/Functions/update_user_balance.php?user_mobile_num=" + userMobileNum + "&user_acc_balance=" + newUserBalance);
-                command.QueryCommand("http://192.168.1.31/MoneySendingApp/Functions/update_user_balance.php?user_mobile_num=" + resMobileNum + "&user_acc_balance=" + newResBalance);
+                command.QueryCommand("http://172.18.13.160/MoneySendingApp/Functions/update_user_balance.php?user_mobile_num=" + userMobileNum + "&user_acc_balance=" + newUserBalance);
+                command.QueryCommand("http://172.18.13.160/MoneySendingApp/Functions/update_user_balance.php?user_mobile_num=" + resMobileNum + "&user_acc_balance=" + newResBalance);
 
                 RecordTransaction(newResBalance);
 
@@ -117,6 +117,9 @@ namespace IT123_MP
         }
         protected void BackToMenu(object sender, EventArgs e)
         {
+            Intent i = new Intent(this, typeof(MenuPage));
+            i.PutExtra("UserMobileNum", userMobileNum);
+            StartActivity(i);
             Finish();
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

@@ -52,10 +52,12 @@
             <Button
                 android:text="@string/log_in"
                 android:textSize="20dp"
+                android:layout_marginBottom="5dp"
                 android:layout_width="260.5dp"
                 android:layout_height="55.5dp"
                 android:backgroundTint="#248fef"
                 android:textColor="#ffffff"
+                android:background="@drawable/topcorners"
                 android:id="@+id/button1" />
             <Button
                 android:text="@string/sign_up"
@@ -64,6 +66,7 @@
                 android:layout_height="55.5dp"
                 android:backgroundTint="#1f6fb6"
                 android:textColor="#ffffff"
+                android:background="@drawable/bottomcorners"
                 android:id="@+id/button2" />
         </LinearLayout>
     </LinearLayout>

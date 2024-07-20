@@ -52,7 +52,7 @@ namespace IT123_MP
 
             if (validData)
             {
-                request = (HttpWebRequest)WebRequest.Create("http://192.168.1.31/MoneySendingApp/Functions/check_login.php?mobile_num=" + mobileNum + "&user_password=" + user_pass);
+                request = (HttpWebRequest)WebRequest.Create("http://172.18.13.160/MoneySendingApp/Functions/check_login.php?mobile_num=" + mobileNum + "&user_password=" + user_pass);
                 response = (HttpWebResponse)request.GetResponse();
                 StreamReader reader = new StreamReader(response.GetResponseStream());
                 res = reader.ReadToEnd();

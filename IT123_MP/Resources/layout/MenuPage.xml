@@ -18,11 +18,11 @@
         <TextView
             android:text=""
             android:layout_width="match_parent"
-            android:layout_height="48.5dp"
+            android:layout_height="wrap_content"
             android:textColor="#248fef"
             android:textStyle="bold"
             android:textSize="30dp"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="7dp"
             android:id="@+id/textView2"/>
     </LinearLayout>
     <LinearLayout
@@ -39,7 +39,8 @@
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:paddingBottom="10dp"
-            android:id="@+id/linearLayout2">
+            android:id="@+id/linearLayout2"
+            android:background="@android:color/transparent">
             <TextView
                 android:text="@string/your_balance"
                 android:textSize="25dp"
@@ -62,11 +63,11 @@
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="299.3dp"
+            android:layout_width="wrap_content"
             android:paddingBottom="4dp"
             android:layout_height="307.6dp"
             android:gravity="center"
-            android:background="#80ffffff"
+            android:background="@android:color/transparent"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="2dp"
             android:id="@+id/linearLayout3">
@@ -81,17 +82,20 @@
                     android:text="@string/cash_in"
                     android:textSize="25dp"
                     android:textColor="#FFFFFF"
-                    android:layout_width="147.6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="5dp"
                     android:layout_height="match_parent"
                     android:backgroundTint="#1f6fb6"
+                    android:background="@drawable/topLeftCorner"
                     android:id="@+id/button1" />
                 <Button
-                    android:text="@string/send_money"
-                    android:textSize="23.5dp"
+                    android:text="@string/send_money_main"
+                    android:textSize="21dp"
                     android:textColor="#FFFFFF"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:backgroundTint="#1f6fb6"
+                    android:background="@drawable/topRightCorner"
                     android:id="@+id/button2" />
             </LinearLayout>
             <Button
@@ -126,6 +130,7 @@
                 android:layout_marginEnd="70dp"
                 android:layout_width="match_parent"
                 android:layout_height="60.5dp"
+                android:background="@drawable/bottomCorners"
                 android:backgroundTint="#f62534"
                 android:id="@+id/button5" />
         </LinearLayout>

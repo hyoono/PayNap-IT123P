@@ -72,7 +72,7 @@ namespace IT123_MP
                 { Toast.MakeText(this, "Please enter a new name", ToastLength.Long).Show(); return; }
                 else
                 {
-                    command.QueryCommand("http://192.168.1.31/MoneySendingApp/Functions/update_user_name.php?user_mobile_num=" + userMobileNum + "&user_name=" + accName);
+                    command.QueryCommand("http://172.18.13.160/MoneySendingApp/Functions/update_user_name.php?user_mobile_num=" + userMobileNum + "&user_name=" + accName);
                     Toast.MakeText(this, "Username has been updated!", ToastLength.Long).Show();
 
                     ReloadUserName();
@@ -85,7 +85,7 @@ namespace IT123_MP
                 bool validData = Validations();
                 if (validData)
                 {
-                    command.QueryCommand("http://192.168.1.31/MoneySendingApp/Functions/update_user_password.php?user_mobile_num=" + userMobileNum + "&user_password=" + confirmPass);
+                    command.QueryCommand("http://172.18.13.160/MoneySendingApp/Functions/update_user_password.php?user_mobile_num=" + userMobileNum + "&user_password=" + confirmPass);
                     Toast.MakeText(this, "Password has been updated!", ToastLength.Long).Show();
 
                     changePass.Checked = false;
@@ -158,7 +158,7 @@ namespace IT123_MP
         {
             userData = command.GetUserData(userMobileNum);
 
-            mobileNum.Text = userMobileNum.ToString();
+            mobileNum.Text = userMobileNum;
             edit_acc_name.Text = userData[0];
         }
         protected void BackToMenu(object sender, EventArgs e)

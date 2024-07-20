@@ -48,5 +48,10 @@ namespace IT123_MP
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+        public override void OnBackPressed()
+        {
+            FinishAffinity();
+        }
+
     }
 }

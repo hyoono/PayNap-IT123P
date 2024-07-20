@@ -57,13 +57,13 @@ namespace IT123_MP
             {
 
                 newAccBalance = userAccBalance + addAmount;
-                command.QueryCommand("http://192.168.1.31/MoneySendingApp/Functions/update_user_balance.php?user_mobile_num=" + userMobileNum + "&user_acc_balance=" + newAccBalance);
+                command.QueryCommand("http://172.18.13.160/MoneySendingApp/Functions/update_user_balance.php?user_mobile_num=" + userMobileNum + "&user_acc_balance=" + newAccBalance);
 
                 command.RecordTransaction(userMobileNum, newAccBalance.ToString(), "ADD MONEY");
 
                 GetUserBalance();
 
-                Toast.MakeText(this, $"User Transaction Complete! {userMobileNum}, {newAccBalance}", ToastLength.Long).Show();
+                Toast.MakeText(this, $"User Transaction Complete!", ToastLength.Long).Show();
                 add_input.Text = String.Empty;
             }
         }
@@ -74,6 +74,9 @@ namespace IT123_MP
         }
         protected void BackInfo(object sender, EventArgs e)
         {
+            Intent i = new Intent(this, typeof(MenuPage));
+            i.PutExtra("UserMobileNum", userMobileNum);
+            StartActivity(i);
             Finish();
         }
         protected bool Validations()
@@ -89,8 +92,8 @@ namespace IT123_MP
             catch
             { Toast.MakeText(this, "Invalid Amount.", ToastLength.Long).Show(); return false; }
 
-            if (addAmount > 8000)
-            { Toast.MakeText(this, "NOTE: There is a 8,000 limit per add money transaction, Please try again.", ToastLength.Long).Show(); return false; }
+            if (addAmount > 10000)
+            { Toast.MakeText(this, "NOTE: There is a 10,000 limit per add money transaction, Please try again.", ToastLength.Long).Show(); return false; }
 
             return true;
 
